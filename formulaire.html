@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <link rel="stylesheet" href="formulaire.css">
+<head>
+    <!-- adapter la page aux écrans de différentes tailles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formulaire.js" defer>/*Renforcer l'exécution du javascript*/</script>
+    <title>Formulaire Complet</title>
+</head>
+<body>
+    <a href="index.html"><img src="logoGI.jpg" width=250px height=180px alt=""></a>
+    <h1>Formulaire prise de contact</h1>
+    <form id="contact-form" onsubmit="handleSubmit(event)"><!--Permet d'envoyer le formulaire à une adresse mail-->
+        <!--Champ de texte-->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+        <label for="Prénom">Prénom :</label>
+        <input type="text" id="Prénom" name="Prénom" required><br><br>
+        
+        <!--Champ d'email-->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!--Champ de date-->
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <!--Liste déroulante-->
+        <label for="Formations">Formations souhaitées à l'ENSIBS :</label>
+        <select name="Formations" id="Formations">
+            <option value="Cyberdéfense">Cyberdéfence</option>
+            <option value="Énergies, Hydrogènes">Énergies, Hydrogène</option>
+            <option value="Génie civil 4.0">Génie civil 4.0</option>
+            <option value="Génie industriel 4.0">Génie industriel 4.0</option>
+            <option value="Informatique et Cybersécurité">Informatique et Cybersécurité</option>
+            <option value="Mécatronique">Mécatronique</option>
+        </select><br><br>
+        
+        <!--Boutons radio-->
+        <p>Actuellement, vous êtes :</p>
+        <input type="radio" id="1ère" name="année" value="1ère">
+        <label for="1ère">en 1ère</label><br><br>
+        <input type="radio" id="terminale" name="année" value="terminale">
+        <label for="terminale">en terminale</label><br><br>
+        <input type="radio" id="IUT" name="année" value="IUT">
+        <label for="1ère">en IUT</label><br><br>
+        <input type="radio" id="licence" name="année" value="licence">
+        <label for="1ère">en licence</label><br><br>
+        <input type="radio" id="master" name="année" value="master">
+        <label for="1ère">en master</label><br><br>
+        <input type="radio" id="reprise" name="année" value="reprise">
+        <label for="1ère">en reprise d'études</label><br><br>
+        <input type="radio" id="autre" name="année" value="autre">
+        <label for="1ère">autre</label><br><br>
+        
+        <!--Case à cocher-->
+        <p>Langues parlées</p>
+        <input type="checkbox" id="français" name="langues" value="français">
+        <label for="français">Français</label><br><br>
+        <input type="checkbox" id="anglais" name="langues" value="anglais">
+        <label for="anglais">Anglais</label><br><br>
+        <input type="checkbox" id="espagnol" name="langues" value="espagnol">
+        <label for="espagnol">Espagnol</label><br><br>
+        
+        <!--Zone de texte-->
+        <label for="demande">Vous avez une demande spécifique à formuler</label><br>
+        <textarea name="demande" id="demande" cols="50" rows="4"></textarea><br><br>
+
+        <!--Bouton de soumission-->
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
